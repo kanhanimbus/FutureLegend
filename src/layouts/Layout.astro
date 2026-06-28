@@ -1,23 +1,74 @@
-<!doctype html>
-<html lang="en">
+---
+import '../components/styles.css'
+---
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<!-- <link rel = "stylesheet" href = "../components/styles.css/"> -->
+		<title>Welcome to FutureLegend!</title>
 	</head>
 	<body>
-		<slot />
+		<div class = "flex-container">
+			<div class = "links-column">
+
+
+
+				<div class = "logo">
+					Insert Logo Here
+				</div>
+				<div class = "links-column-item">
+					<a href = "/about.html">about me</a>
+				</div>
+				<div class = "links-column-item">
+					my writings
+				</div>
+				<div class = "links-column-item">
+					influences
+				</div>
+
+
+
+			</div>
+			<div class = "subject-column">
+				<slot/>
+			</div>
+		</div>
 	</body>
 </html>
-
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.links-column {
+    border: 2px solid #630075;
+    color: #b204d1;
+    background-color: black;
+    flex: 1 1 0;
+}
+
+.subject-column {
+    border: 2px solid #630075;
+    color: #b204d1;
+    background-color: black;
+    flex: 8 1 0;
+}
+
+.logo {
+    padding: 30px;
+    text-align: center;
+    margin: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+}
+
+.links-column-item {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
 </style>

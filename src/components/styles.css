@@ -17,3 +17,19 @@
     background-color: black;
     flex: 8 1 0;
 }
+
+.logo {
+    padding: 30px;
+    text-align: center;
+    margin: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+}
+
+.links-column-item {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
