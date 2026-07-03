@@ -11,23 +11,30 @@
 	    </div>
     	<div class = "links-column-item">
     		<a href = "/influences.html">influences</a>
-    	</div>
+    	</div>    
+    </div>
+    <div class = "links-column-bottom">
+        
     </div>
 </div>
 
 
+
 <style>
-.links-column-container {
-    border: 2px solid #630075;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+.links-column-container {    
     color: #b204d1;
     background-color: black;
     flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
 }
 .links-column-top {
     background-color: black;
+    border: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-top-right-radius: 30px;
     flex: 1 1 0;
+    margin-bottom: auto;
 }
 .links-column-item {
     padding: 10px;
@@ -38,11 +45,13 @@
 }
 .links-column-bottom {
     border-top: 2px solid #630075;
+    border-right: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
     border-top-right-radius: 30px;
+    padding: 15px;
     color: #b204d1;
     background-color: black;
-    flex: 1 1 0;
-    margin-top: -20px;
-    height:
+    margin-top: -30px;
 }
 </style>
