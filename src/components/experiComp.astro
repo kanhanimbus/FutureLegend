@@ -1,0 +1,121 @@
+{/* first draft with margin top auto and margin bottom auto. not working because the linkscolumntop container is ending too early. */}
+
+<!--<div class = "links-column-container">
+    <div class = "links-column-top">
+    	<div class = "logo">
+    		<a href = "/index.html">Insert Logo Here</a>
+       </div>
+    	<div class = "links-column-item">
+    		<a href = "/about.html">about me</a>
+    	</div>
+    	<div class = "links-column-item">
+	    	<a href = "/writings.html">my writings</a>
+	    </div>
+    	<div class = "links-column-item">
+    		<a href = "/influences.html">influences</a>
+    	</div>    
+    </div>
+    <div class = "links-column-bottom">
+        
+    </div>
+</div>
+
+
+
+<style>
+.links-column-container {
+    
+    
+    color: #b204d1;
+    background-color: black;
+    flex: 1 1 0;
+}
+.links-column-top {
+    background-color: black;
+    border: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-top-right-radius: 30px;
+    flex: 1 1 0;
+    margin-bottom: auto;
+}
+.links-column-item {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+.links-column-bottom {
+    border-top: 2px solid #630075;
+    border-right: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-top-right-radius: 30px;
+    padding: 30px;
+    color: #b204d1;
+    background-color: black;
+    margin-top: auto;
+}
+</style>
+-->
+
+
+<!-- i am a stupid idiot i forgot to toggle display flex in links column container and now it works -->
+
+<div class = "links-column-container">
+    <div class = "links-column-top">
+    	<div class = "logo">
+    		<a href = "/index.html">Insert Logo Here</a>
+       </div>
+    	<div class = "links-column-item">
+    		<a href = "/about.html">about me</a>
+    	</div>
+    	<div class = "links-column-item">
+	    	<a href = "/writings.html">my writings</a>
+	    </div>
+    	<div class = "links-column-item">
+    		<a href = "/influences.html">influences</a>
+    	</div>    
+    </div>
+    <div class = "links-column-bottom">
+        
+    </div>
+</div>
+
+
+
+<style>
+.links-column-container {    
+    color: #b204d1;
+    background-color: black;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+}
+.links-column-top {
+    background-color: black;
+    border: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-top-right-radius: 30px;
+    flex: 1 1 0;
+    margin-bottom: auto;
+}
+.links-column-item {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+.links-column-bottom {
+    border-top: 2px solid #630075;
+    border-right: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-top-right-radius: 30px;
+    padding: 15px;
+    color: #b204d1;
+    background-color: black;
+    margin-top: -30px;
+}
+</style>
