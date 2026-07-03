@@ -1,5 +1,4 @@
 ---
-import '../components/styles.css'
 import LinksColumn from "../components/LinksColumn.astro"
 ---
 <!DOCTYPE html>
@@ -15,11 +14,7 @@ import LinksColumn from "../components/LinksColumn.astro"
 					<slot/>
 				</div>
 			</div>
-			<div class = "footer">
-				Footer goes here
-			</div>
 		</div>
-		
 	</body>
 </html>
 <style>
@@ -29,23 +24,12 @@ import LinksColumn from "../components/LinksColumn.astro"
 	height: 100vh;
 }
 
-.footer {
-	border: 2px solid #630075;
-	border-radius: 30px;
-    color: #b204d1;
-    background-color: black;
-	height: 10%;
-	flex: 1 1 1;
-}
-
 .content-container {
     display: flex;
     flex-direction: row;
     flex: 9 1 1;
-	height: 90%;
+	height: 100%;
 }
-
-
 
 .subject-column {
     border: 2px solid #630075;

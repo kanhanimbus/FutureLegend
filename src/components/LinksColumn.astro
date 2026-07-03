@@ -3,24 +3,24 @@
     	<div class = "logo">
     		<a href = "/index.html">Insert Logo Here</a>
        </div>
-    	<div class = "links-column-item">
-    		<a href = "/about.html">about me</a>
-    	</div>
-    	<div class = "links-column-item">
-	    	<a href = "/writings.html">my writings</a>
-	    </div>
-    	<div class = "links-column-item">
-    		<a href = "/influences.html">influences</a>
-    	</div>    
+        <a href = "/about.html" class = "links-button">about me</a>
+        <a href = "/writings.html" class = "links-button">my writings</a>
+        <a href = "/influences.html" class = "links-button">my influences</a>
     </div>
-    <div class = "links-column-bottom">
-        
-    </div>
+    <div class = "links-column-bottom"></div>
 </div>
 
 
 
 <style>
+.logo {
+    padding: 30px;
+    text-align: center;
+    margin: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+}
+
 .links-column-container {    
     color: #b204d1;
     background-color: black;
@@ -40,8 +40,17 @@
     padding: 10px;
     text-align: center;
     margin: 10px;
-    border: 2px solid;
+    border: 2px solid #b204d1;
     border-radius: 20px;
+}
+.links-button {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid #b204d1;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
 }
 .links-column-bottom {
     border-top: 2px solid #630075;
