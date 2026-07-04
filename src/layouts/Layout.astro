@@ -1,5 +1,6 @@
 ---
 import LinksColumn from "../components/LinksColumn.astro"
+import SubjectColumn from "../components/SubjectColumn.astro"
 ---
 <!DOCTYPE html>
 <html>
@@ -10,9 +11,9 @@ import LinksColumn from "../components/LinksColumn.astro"
 		<div class = "flex-container">
 			<div class = "content-container">
 				<LinksColumn/>
-				<div class = "subject-column">
+				<SubjectColumn>
 					<slot/>
-				</div>
+				</SubjectColumn>
 			</div>
 		</div>
 	</body>

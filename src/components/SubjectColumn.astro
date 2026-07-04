@@ -1,0 +1,47 @@
+<div class = "subject-column-container">
+    <div class = "subject-column-top">
+        <slot/>
+    </div>
+    <div class = "subject-column-bottom"></div>
+</div>
+
+
+
+<style>
+.logo {
+    padding: 30px;
+    text-align: center;
+    margin: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+}
+
+.subject-column-container {    
+    color: #b204d1;
+    background-color: black;
+    flex: 8 1 0;
+    display: flex;
+    flex-direction: column;
+}
+.subject-column-top {
+    background-color: black;
+    border: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-top-left-radius: 30px;
+    padding: 10px;
+    flex: 1 1 0;
+    margin-bottom: auto;
+}
+.subject-column-bottom {
+    border-top: 2px solid #630075;
+    border-left: 2px solid #630075;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top-left-radius: 30px;
+    padding: 15px;
+    color: #b204d1;
+    background-color: black;
+    margin-top: -30px;
+}
+</style>
+

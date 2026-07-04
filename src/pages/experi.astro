@@ -1,6 +1,7 @@
 ---
 import '../components/styles.css'
 import ExperiComp from "../components/ExperiComp.astro"
+import SubjectColumn from '../components/SubjectColumn.astro'
 ---
 <!DOCTYPE html>
 <html>
@@ -11,9 +12,9 @@ import ExperiComp from "../components/ExperiComp.astro"
 		<div class = "flex-container">
 			<div class = "content-container">
 				<ExperiComp/>
-				<div class = "subject-column">
-					<slot/>
-				</div>
+				<SubjectColumn>
+					experimental page
+				</SubjectColumn>
 			</div>
 		</div>
 	</body>
