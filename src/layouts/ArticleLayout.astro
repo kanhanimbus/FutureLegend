@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<div class = "picture-title-container">
+        <div class = "picture">
+            Insert Image Here
+        </div>
+        <div class = "title">
+            <slot name = "title"/>
+        </div>
+</div>
+<div class = "bodyArticle" >
+        <slot name = "bodyArticle"/>
+</div>
+
+<style>
+    .picture-title-container {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 0;
+    }
+    .picture {
+        width: 20%;
+        aspect-ratio: 1/1; 
+        border: 2px solid #FFF080;
+        border-radius: 30px;
+        display: flex;
+        flex: 1 1 0;
+    }
+    .title {
+        border: 2px solid #FFF080;
+        border-radius: 30px;
+        display: flex;
+        flex: 4 1 0;
+    }
+    .bodyArticle {
+        border: 2px solid #FFF080;
+        border-radius: 30px;
+        display: flex;
+        flex: 4 1 0;
+    }
+</style>
