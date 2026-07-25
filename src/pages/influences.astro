@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import { getCollection, getEntry, render } from "astro:content";
+const Influences = await getCollection('blogInfluences');
 ---
 <Layout>
-influences
+<h1>My posts</h1>
+<ul>
+  {Influences.map(post => (
+    <li><a href={`/influences/${post.id}`}>{post.data.title}</a></li>
+  ))}
+</ul>
 </Layout>
