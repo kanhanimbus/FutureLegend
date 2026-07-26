@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const posts = await getCollection('blogInfluences');
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<div class = "headingInfluences" slot = "title">{post.data.title}</div>
+<Content slot = "bodyArticle"/>
+
+<style>
+    .headingInfluences {
+        flex: 1 1 0;
+        font-size: 50px;
+    }
+</style>

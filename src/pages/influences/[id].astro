@@ -15,11 +15,26 @@ const { Content } = await render(post);
 ---
 <Layout>
   <ArticleLayout>
-
-      <h1 slot = "title">{post.data.title}</h1>
-
-
+      <div class = "headingInfluences" slot = "title">
+        <span>{post.data.title}
+          </span>
+      </div>
       <Content slot = "bodyArticle"/>
-
   </ArticleLayout>
 </Layout>
+
+<style>
+  .headingInfluences {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    flex: 1 1 0;
+    text-align: center;
+  }
+  span {
+   display: inline-block;
+   vertical-align: middle;
+   line-height: normal;
+  }
+</style>
