@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <div class="bgColorCont">
-<div class = "picture-title-container">
-        <div class = "picture">
-            Insert Image Here
-        </div>
+    <div class = "picture-title-container">
         <div class = "title">
             <slot name = "title"/>
+        </div>
+        <div class = "picture">
+            Insert Image Here
         </div>
 </div>
 <div class = "bodyArticle" >
         <slot name = "bodyArticle"/>
 </div>
+<slot name = "goBack"/>
 </div>  
 
 <style>
