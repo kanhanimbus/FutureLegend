@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <div class="bgColorCont">
+    <a href = "/" class = "goBack">Go Back</a>
     <div class = "picture-title-container">
         <div class = "title">
             <slot name = "title"/>
@@ -11,10 +12,20 @@
 <div class = "bodyArticle" >
         <slot name = "bodyArticle"/>
 </div>
-<slot name = "goBack"/>
 </div>  
 
 <style>
+     .goBack {
+        border-radius: 30px;
+        background-color: #1b1bad;
+        width: 3%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        border: 2px solid #FFe52c;
+        color: #FFe52c
+    }
     .bgColorCont {
         border-radius: 30px;
         background-color: #ffe52c;
