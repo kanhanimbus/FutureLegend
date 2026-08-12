@@ -15,6 +15,19 @@ const { Content } = await render(post);
 ---
 <Layout>
   <ArticleLayout>
+    <nav aria-label="Breadcrumb" class="breadcrumb" slot = "goBack">
+    <ol>
+      <li class="breadcrumbs__item">
+        <a href="/" class="breadcrumb__link">Home</a>
+        </li>
+        <li class = "breadcrumb-separator">></li>
+        <li>
+          <a href="/influences" class="breadcrumb__link">Influences</a>
+      </li>
+      <li class = "breadcrumb-separator">></li>
+      <li><span aria-current="page">{post.data.title}</span></li>
+    </ol>
+    </nav>
       <div class = "headingInfluences" slot = "title">
         <span>{post.data.title}
           </span>
@@ -24,6 +37,55 @@ const { Content } = await render(post);
 </Layout>
 
 <style>
+<<<<<<< HEAD
+=======
+  .breadcrumb {
+  padding: 5px;
+  /* flex: 1; */
+  /* display: flex; */
+  align-items: center;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex: 1;  
+}
+.breadcrumb-separator {
+  display: inline-block;
+  margin: 0 0.25rem;
+  /* content: "→"; */
+  background-color: #1b1bad;
+  color: #FFe52c;
+}
+  /* .breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "→";
+  } */
+li {
+  background-color: #FFe52c;
+  border-radius: 30px;
+  padding: 5px;
+  color: #1b1bad;
+}
+
+  .directoryDisp {
+        border-radius: 30px;
+        background-color: #1b1bad;
+        width: 3%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        border: 2px solid #FFe52c;
+        color: #FFe52c
+    }
+>>>>>>> goBackTrial
   .headingInfluences {
     display: flex;
     justify-content: center;

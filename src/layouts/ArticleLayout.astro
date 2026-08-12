@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <div class="bgColorCont">
+    <div class = "goBack"><slot name = "goBack"/></div>
     <div class = "picture-title-container">
         <div class = "title">
             <slot name = "title"/>
@@ -14,11 +15,23 @@
 </div>  
 
 <style>
+<<<<<<< HEAD
     .spoilerBackContainer {
         border-radius: 30px;
         display: flex;
         flex-direction: row;
   }
+=======
+     .goBack {
+        border-radius: 30px;
+        background-color: #1b1bad;
+        display: flex;
+        /*flex: 1;*/
+        text-align: center;
+        border: 2px solid #FFe52c;
+        color: #FFe52c
+    }
+>>>>>>> goBackTrial
     .bgColorCont {
         border-radius: 30px;
         background-color: #ffe52c;
