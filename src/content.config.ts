@@ -22,4 +22,24 @@ const blogInfluences = defineCollection({
     }),
 });
 
-export const collections = { blogWritings, blogInfluences };
+const blogLogs = defineCollection({
+    loader: glob({ base: './src/content/logs', pattern: '**/*.{md,mdx}'}),
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        pubDate: z.coerce.date().optional(),
+        updatedDate: z.coerce.date().optional(),
+    }),
+});
+
+const blogRecs = defineCollection({
+    loader: glob({ base: './src/content/recs', pattern: '**/*.{md,mdx}'}),
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        pubDate: z.coerce.date().optional(),
+        updatedDate: z.coerce.date().optional(),
+    }),
+});
+
+export const collections = { blogWritings, blogInfluences, blogLogs, blogRecs };

@@ -9,18 +9,26 @@ const Influences = await getCollection('blogInfluences');
     <div class="articleNames">
       <ul>
       {Influences.map(post => (
-      <li><a href={`/influences/${post.id}`}>{post.data.title}</a></li>
+      <li><a href={`/influences/${post.id}`} class = "linkInfluences">{post.data.title}</a><br>{post.data.description}</li>
       ))}
     </ul>
     </div>
 </div>
 
 <style>
+  ul {
+    list-style-type: none;
+  }
   li {
     border-radius: 30px;
     background-color: #ffe52c;
+    color: #1b1bad;
     margin-bottom: 5px;
-    padding-left: 5px;
+    padding-left: 25px;
+    font-size: 15px;
+  }
+  .linkInfluences {
+    font-size: 20px;
   }
   .titleInfluences {
     border: 2px solid #FFe52c;

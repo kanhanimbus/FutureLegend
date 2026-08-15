@@ -1,16 +1,16 @@
 ---
 import { getCollection, getEntry, render } from "astro:content";
-const Writings = await getCollection('blogWritings');
+const Recs = await getCollection('blogRecs');
 ---
 
 <div class="bgColorCont">
-    <div class="titleWritings">
-      <h1>Things I have written</h1>
+    <div class="titleRecs">
+      <h1>Recommendations and Reviews</h1>
     </div>
     <div class="articleNames">
       <ul>
-      {Writings.map(post => (
-      <li><a href={`/writings/${post.id}`} class = "linkWritings">{post.data.title}</a><br>{post.data.description}</li>
+      {Recs.map(post => (
+      <li><a href={`/recs/${post.id}`} class = "linkRecs">{post.data.title}</a><br>{post.data.description}</li>
       ))}
       </ul>
     </div>
@@ -28,10 +28,10 @@ const Writings = await getCollection('blogWritings');
     padding-left: 25px;
     font-size: 15px;
   }
-  .linkWritings {
+  .linkRecs {
     font-size: 20px;
   }
-  .titleWritings {
+  .titleRecs {
     border: 2px solid #FFe52c;
         border-radius: 30px;
         display: flex;
