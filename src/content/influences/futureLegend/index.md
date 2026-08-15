@@ -2,6 +2,9 @@
 title: 'Future Legend'
 description: 'How the album Diamond Dogs influenced me'
 ---
+
+![The album cover of Diamond Dogs.](picture.jpg)
+
 This ain't rock and roll, this is genocide
 
 As they pulled you out of the oxygen tent

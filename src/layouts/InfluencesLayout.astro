@@ -1,0 +1,72 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/*.{jpeg,jpg,png}');
+---
+
+<!DOCTYPE html>
+<div class="bgColorCont">
+    <div class = "goBack"><slot name = "goBack"/></div>
+    <div class = "picture-title-container">
+        <div class = "title">
+            <slot name = "title"/>
+        </div>
+</div>
+<div class = "bodyArticle" >
+        <slot name = "bodyArticle"/>
+</div>
+</div>  
+
+<style>
+     .goBack {
+        border-radius: 30px;
+        background-color: #1b1bad;
+        display: flex;
+        /*flex: 1;*/
+        text-align: center;
+        border: 2px solid #FFe52c;
+        color: #FFe52c
+    }
+    .bgColorCont {
+        border-radius: 30px;
+        background-color: #ffe52c;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .picture-title-container {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 0;
+    }
+    .picture {
+        width: 20%;
+        aspect-ratio: 1/1; 
+        border: 2px solid #FFe52c;
+        border-radius: 30px;
+        flex: 1 1 0;
+        text-align: center;
+    }
+    .title {
+        border: 2px solid #FFe52c;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        flex: 4 1 0;
+        text-align: center;
+        font-size: large;
+        background-color: #1b1bad;
+    }
+    .bodyArticle {
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 2px solid #ffe52c;
+        border-radius: 30px;
+        flex-direction: column;
+        flex: 4 1 0;
+        background-color: #1b1bad;
+        font-size: 20px;
+        overflow: auto;
+    }
+</style>

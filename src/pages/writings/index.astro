@@ -3,11 +3,64 @@ import Layout from "../../layouts/Layout.astro"
 import { getCollection, getEntry, render } from "astro:content";
 const Writings = await getCollection('blogWritings');
 ---
-<Layout>
+<!-- <Layout>
 <h1>My Writings</h1>
 <ul>
   {Writings.map(post => (
     <li><a href={`/writings/${post.id}`}>{post.data.title}</a></li>
   ))}
 </ul>
+</Layout> -->
+
+<Layout>
+  <div class="bgColorCont">
+    <div class="titleWritings">
+      <h1>Things I have written</h1>
+    </div>
+    <div class="articleNames">
+      <ul>
+      {Writings.map(post => (
+      <li><a href={`/writings/${post.id}`}>{post.data.title}</a></li>
+      ))}
+    </ul>
+    </div>
+    
+  </div>
 </Layout>
+
+<style>
+  li {
+    border-radius: 30px;
+    background-color: #ffe52c;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+  .titleWritings {
+    border: 2px solid #FFe52c;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        text-align: center;
+        font-size: large;
+        background-color: #1b1bad;
+  }
+  .articleNames {
+    padding-left: 16px;
+        padding-right: 16px;
+        border: 2px solid #ffe52c;
+        border-radius: 30px;
+        flex-direction: column;
+        flex: 9 1 1;
+        background-color: #1b1bad;
+        overflow: auto;
+        font-size: 20px;
+  }
+  .bgColorCont {
+        border-radius: 30px;
+        background-color: #ffe52c;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+</style>
